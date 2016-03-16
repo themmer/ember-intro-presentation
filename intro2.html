@@ -69,7 +69,7 @@
         <li>Router - URL setup / Load Data</li>
         <li>Model - Data</li>
         <li>Controller - link model/data to view</li>
-        <li>Template/View - uses handlebars</li>
+        <li>Template/View - HTML / handlebars</li>
       </ul>
     </section>
 
@@ -78,9 +78,9 @@
         Down</a></h1>
       <ul>
         <li>Application - Top Hierarchy</li>
-        <li>Routes &darr; Child Routes</li>
+        <li>Routes &darr; Child Routes/Controllers</li>
         <li>Controller &searr; Templates</li>
-        <li>Templates &darr; Controllers</li>
+        <li>Templates &darr; Components &sarr; Controllers... </li>
       </ul>
     </section>
 
@@ -94,8 +94,8 @@
       <h1><a href="https://guides.emberjs.com/v2.4.0/components/triggering-changes-with-actions/" target="_blank">Actions
         Up</a></h1>
       <ul>
-        <li>Local Action</li>
-        <li>Closure Action (remote)</li>
+        <li><a href="https://guides.emberjs.com/v2.4.0/templates/actions/" target="_blank">Local Action</a></li>
+        <li><a href="https://guides.emberjs.com/v2.4.0/components/triggering-changes-with-actions/#toc_passing-the-action-to-the-component" target="_blank">Closure Action (remote callback)</a></li>
       </ul>
     </section>
 
@@ -107,6 +107,7 @@
       <pre>
         actions: {
           dataChangedAction(selectedData) {
+            // Note selectedData was passed from the template for context
             // Do something awesome
             // change route
             // update data
@@ -121,18 +122,22 @@
       <h1><a href="https://guides.emberjs.com/v2.4.0/components/triggering-changes-with-actions/" target="_blank">Local
         Action</a></h1>
       <ul>
-        <li></li>
+        <li>This will bubble up</li>
+        <li>Order: Controller, Route Hierarchy, then Application Route</li>
+        <li>An error will be produced if no receiver</li>
+        <li>Simple unless you have to go up multiple levels</li>
       </ul>
-      <pre>
-
-      </pre>
     </section>
 
     <section>
       <h1><a href="https://guides.emberjs.com/v2.4.0/components/triggering-changes-with-actions/" target="_blank">Closure/Callback
         Action</a></h1>
       <ul>
+        <li>Passed from controller to template/component</li>
+        <li>{{cover-flow dataList=model selectedData=selectedData <strong>dataChangedAction=(action "dataChangedAction")}}</strong></li>
         <li></li>
+        <li>Inside coverflow component</li>
+        <li>this.get<strong>('dataChangedAction')(selectedData)</strong>;</li>
       </ul>
     </section>
 
@@ -149,12 +154,14 @@
     <section>
       <h1><a href="https://guides.emberjs.com/v2.4.0/object-model/computed-properties/" target="_blank">Computed
         Properties Example</a></h1>
-
+      <ul>
+        <li>UI Code/Demo</li>
+      </ul>
     </section>
 
     <section>
       <h1>Quick Q & A / DEMO</h1>
-      <img src="img/testing.jpg" width="350" height="400"/>
+      <img src="img/demoTime.jpg"/>
     </section>
   </div>
 </div>
