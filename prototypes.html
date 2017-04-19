@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>High-Fidelity Protoypes using Javascript</title>
+
+  <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+  <meta name="author" content="Hakim El Hattab">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+  var link = document.createElement('link');
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match(/print-pdf/gi)
+  ? 'css/print/pdf.css'
+  : 'css/print/paper.css';
+document.getElementsByTagName('head')[0].appendChild(link);
+</script>
+
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js">
+  </script>
+  <![endif]-->
+
+  <style>
+    .reveal {
+      overflow-y: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="reveal">
+
+  <div class="slides">
+    <section>
+      <h1>High-Fidelity Protoypes</h1>
+      <h2>Using Javascript</h1>
+      <p style="margin-top: 3em;">
+        <div>GitHub: <a href="https://github.com/themmer" target="_blank">Tim Hemmer</a></div>
+        <div>Twitter: <a href="https://twitter.com/TimFrontDev" target="_blank">@TimFrontDev</a></div>
+      </p>
+    </section>
+
+    <section>
+      <h1>Tentative Outline</h1>
+      <pre>
+        ** Intro
+          Programming for 16 years
+          Worked in small, medium, and big companies
+          Computer Science / MIS Majors
+          MBA
+          UX interest along with programming for 15 years
+          Passionate about Ember.js (JS Framework)
+
+        ** Current Problems with Requirements and Mockups
+          Picture mockups usually go desktop first (and only desktop)
+            Lacks conditions and interaction
+            Theory vs Implementations
+          Happy Path scenarios only
+            What?! Ifs
+
+        ** Creating Tech Websites / Apps
+          Businesses
+          	Prevent decisions that don't fit / make sense
+          Entrepreneur
+            Know the market and competition first
+            Has time and money vs get the solution out there
+          UX
+            Simple HTML, CSS, and jQuery goes far
+              Some of this can be reused/transitioned for real project
+
+        ** Experience with High-Fidelity (HF)
+          Hackathon
+          Proof of Concepts at Work
+          Side Projects
+          Feedback from Developers
+
+        ** Pain Points
+        https://image.slidesharecdn.com/anintroductiontobdd-140422005433-phpapp02/95/an-introduction-to-behaviordriven-development-bdd-7-638.jpg?cb=1398128146
+          Creating complete solutions multiple times
+          Users discrepancy of need/want
+          Users designing the end product
+          Internal requirements without complete vision
+          Lacking little material details on mockups
+
+        ** Prototype
+          Simulation or Sample of a product
+          Test products
+            Find problems (usability)
+          Get feedback
+          Ongoing process loop
+
+        ** Low-Fidelity (LF)
+          Relatively cheap and easy
+          Limited function
+          Limited interaction
+          Great for high-level concepts
+
+        ** Low-Fidelity (LF) - Examples
+          User Flow
+          Wireframe
+          Sketches
+
+        ** Low-Fidelity - Real Example
+
+        ** High-Fidelity (HF)
+          UX design is an iteration
+
+        ** High-Fidelity (HF) - Real Example
+
+        ** Why High-Fidelity (HF)?
+          Realistic for users/customers/stakeholders
+          Forces you to think
+          Find problems earlier than real implementation
+          Keep focus on user experience up-front
+
+        ** Advantages of HF
+          Page Hierarchy
+          User Workflows
+          Complex Components
+          Interactive
+
+        User / Stakeholder Benefits
+          Person won't get hung up on incorrect or repeated data
+          Less `squirrels` of what about this
+          	'That's not the correct format of that data!'
+          	'The data is repeating!'
+          	'This button doesn't work!'
+          See Responsive design and show data layout issues
+          Some people need a visual to approve or find problems
+          	If the stakeholder doesn't know this could guide them
+        When stakeholders don't know what they want
+          I've seen 3 iterations on projects before (server work included)
+            Introduces bugs, frustrates most workers
+        Can still be used with low-fidelity prototyping to start
+
+        ** Disadvantages of HF with JS
+          More expensive than low-fidelity if prototype is thrown away
+          Requires specialized skills of UX design and/or programming
+          Requires experience on the programming and design side
+            Along with the frameworks and technologies chosen
+
+          Takes longer than Low-Fidelity
+            More expensive and/or time
+            Entrepreneurship requires quick turnaround
+
+          Simple tasks that add up
+          	Troubleshooting
+          	Routing
+          	Data integration
+          	CSS
+
+          Spending time on server work
+            Most likely requirements change
+          	  Both client and server have to adapt
+            Business logic
+
+          YMMV
+            Complexity of project / requirements
+            Tech experience
+            Designers
+            TODOs
+
+          Hurdles / Gotchas...
+
+        ** My Hurdles of HF with JS
+
+        Choosing technologies to achieve high-fidelity
+          JS frameworks (Ember, React, Angular 2, etc)
+          CSS/UI frameworks (Bootstrap, MDL, SASS, LESS, etc)
+          Code formatting
+        Coding first before document/design mockup
+        Dev hat vs Design hat switching
+        Smoke and mirrors <==> real?
+        Data models and relationships
+        Data integrity
+
+        Wanting to do things the `right` way
+          Hardcoding vs dynamic
+          Fake data vs real data
+          Data integrity between pages
+          Spending time on code comments
+          Unit Tests
+          Data Modeling/Relationships (if not hardcoding)
+          Code refactoring / Best practice
+          Code reviews / TODOs
+
+        ** Advantages of using Ember.js for HF Prototyping
+          Automation of creation of files (CLI)
+          Lots of available addons
+            Creating a new project is easy
+          Local data setup that can be switched to a server (ember-cli-mirage)
+            `faker` creates random data and specific data rules (e.g. Length)
+            Fake data can be used for testing too
+          Auto Reload Browser with changes
+          Out-of-the-box technologies already incorporated and ready to start
+          Each project gets easier due to similarities and reuse
+
+        ** Ember.js short video demo of using command line, page layout, and login
+
+        ** Precautions of using JS Frameworks for HF prototyping
+          Designers won't be able to do the heavy lifting
+          Deliverable vs Research/Learning
+          Focusing on final details instead of prototype
+
+          Recommended experience:
+            JS framework basic in and outs
+            Programming experience
+            UI components
+            Javascript
+            CSS / HTML
+
+        ** Function vs Design First?
+          With components and ui frameworks
+            CSS is easier to change with SASS, LESS, etc
+          Some design requirements is required
+          	Quick sketch mockups
+          	Navigation
+          	Layout would be ideal on each page
+          	Components - depends on the needs
+
+        // Can cut out if no time
+        ** Overall Process
+          One thing at a time
+          Goes in iterations
+            Plan, Implement, Measure, Learn
+
+        // Can cut this section out if no time
+        ** Sx5 Rapid Prototyping for UX Design
+          Strategy
+          	What is the big goal of the product?
+        	What does the user want?
+        	What does the business want?
+
+          Scope
+        	Creating user stories (actions)
+        	List objectives for the software
+        	How does the product help the users?
+        	How many clicks does it take to get to each essential function?
+        	What type of user is interested in this application?
+
+          Structure
+        	How do all the pieces of the site fit together and behave?
+        	How does the user find what they are looking for in an intuitive way?
+        	What are the flow of actions and interactions throughout the site?
+
+          Skeleton (Layout)
+          	http://www.belatrixsf.com/wp-content/uploads/2014/09/grafico5.png
+
+          Surface
+        	Branding
+        	Colors
+        	Fonts
+        	Tables
+        	Components
+        	Buttons
+      </pre>
+    </section>
+  </div>
+</div>
+
+<script src="lib/js/head.min.js">
+</script>
+<script src="js/reveal.js">
+</script>
+
+<script>
+// Full list of configuration options available at:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+  controls: true,
+  progress: true,
+  history: true,
+  center: true,
+  transition: 'convex', // none/fade/slide/convex/concave/zoom
+  // Optional reveal.js plugins
+  dependencies: [
+    {
+      src: 'lib/js/classList.js',
+      condition: function() {
+        return !document.body.classList;
+      },
+    },
+  ],
+});
+</script>
+
+</body>
+</html>
