@@ -26,9 +26,7 @@
   var link = document.createElement('link');
 link.rel = 'stylesheet';
 link.type = 'text/css';
-link.href = window.location.search.match(/print-pdf/gi)
-  ? 'css/print/pdf.css'
-  : 'css/print/paper.css';
+link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
 document.getElementsByTagName('head')[0].appendChild(link);
 </script>
 
@@ -193,6 +191,7 @@ document.getElementsByTagName('head')[0].appendChild(link);
         Data integrity
 
         Wanting to do things the `right` way
+          Login / Authentication / Session
           Hardcoding vs dynamic
           Fake data vs real data
           Data integrity between pages
@@ -236,8 +235,10 @@ document.getElementsByTagName('head')[0].appendChild(link);
           	Layout would be ideal on each page
           	Components - depends on the needs
 
-        ** Google Ventures?
-          Design Sprint (http://www.gv.com/sprint/)
+        ** Google Ventures? (http://www.gv.com/sprint/)
+             Design Sprint
+        ** patternlab.io?
+        ** Storybook React? (https://storybooks.js.org/)
 
         // Can cut out if no time
         ** Overall Process
@@ -299,9 +300,9 @@ Reveal.initialize({
       src: 'lib/js/classList.js',
       condition: function() {
         return !document.body.classList;
-      },
-    },
-  ],
+      }
+    }
+  ]
 });
 </script>
 
